@@ -1,0 +1,1692 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0313.2002                               -->
+<workbook original-version='18.1' source-build='2025.1.0 (20251.25.0313.2002)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <CascadingFilters />
+    <ExplainData_AuthorControls />
+    <ExplainData_NullValueExplanation />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Select View Type' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Monthly View&quot;'>
+        <calculation class='tableau' formula='&quot;Monthly View&quot;' />
+        <members>
+          <member value='&quot;Monthly View&quot;' />
+          <member value='&quot;Yearly View&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='salmon_monthly_reports' inline='true' name='federated.0crdx780xhagyr0zmu6b41dj93fn' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='salmon_monthly_reports' name='textscan.198i4510b6hhhs15k4pn21kjksfm'>
+            <connection class='textscan' directory='data' filename='salmon_monthly_reports.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='salmon_monthly_reports (2)' name='textscan.1o4gan20vywcki1176hfw13x7g8d'>
+            <connection class='textscan' directory='data' filename='salmon_monthly_reports.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1o4gan20vywcki1176hfw13x7g8d' name='salmon_monthly_reports.csv' table='[salmon_monthly_reports#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_BE'>
+            <column datatype='integer' name='SampleNumber' ordinal='0' />
+            <column datatype='string' name='MortalitiesKilograms' ordinal='1' />
+            <column datatype='integer' name='ActualBiomass' ordinal='2' />
+            <column datatype='integer' name='BiomassExceedenceTonnes' ordinal='3' />
+            <column datatype='integer' name='FeedKilograms' ordinal='4' />
+            <column datatype='integer' name='MaximumBiomassAllowed' ordinal='5' />
+            <column datatype='string' name='WaterType' ordinal='6' />
+            <column datatype='string' name='LocalAuthority' ordinal='7' />
+            <column datatype='string' name='Country' ordinal='8' />
+            <column datatype='integer' name='Lab_Reference' ordinal='9' />
+            <column datatype='date' name='FlooredDate' ordinal='10' />
+            <column datatype='integer' name='Month' ordinal='11' />
+            <column datatype='integer' name='Year' ordinal='12' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[salmon_monthly_reports.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_BE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SampleNumber</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SampleNumber]</local-name>
+            <parent-name>[salmon_monthly_reports.csv]</parent-name>
+            <remote-alias>SampleNumber</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MortalitiesKilograms</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[MortalitiesKilograms]</local-name>
+            <parent-name>[salmon_monthly_reports.csv]</parent-name>
+            <remote-alias>MortalitiesKilograms</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ActualBiomass</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ActualBiomass]</local-name>
+            <parent-name>[salmon_monthly_reports.csv]</parent-name>
+            <remote-alias>ActualBiomass</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BiomassExceedenceTonnes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BiomassExceedenceTonnes]</local-name>
+            <parent-name>[salmon_monthly_reports.csv]</parent-name>
+            <remote-alias>BiomassExceedenceTonnes</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FeedKilograms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FeedKilograms]</local-name>
+            <parent-name>[salmon_monthly_reports.csv]</parent-name>
+            <remote-alias>FeedKilograms</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MaximumBiomassAllowed</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MaximumBiomassAllowed]</local-name>
+            <parent-name>[salmon_monthly_reports.csv]</parent-name>
+            <remote-alias>MaximumBiomassAllowed</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WaterType</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[WaterType]</local-name>
+            <parent-name>[salmon_monthly_reports.csv]</parent-name>
+            <remote-alias>WaterType</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LocalAuthority</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[LocalAuthority]</local-name>
+            <parent-name>[salmon_monthly_reports.csv]</parent-name>
+            <remote-alias>LocalAuthority</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[salmon_monthly_reports.csv]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lab_Reference</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Lab_Reference]</local-name>
+            <parent-name>[salmon_monthly_reports.csv]</parent-name>
+            <remote-alias>Lab_Reference</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FlooredDate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[FlooredDate]</local-name>
+            <parent-name>[salmon_monthly_reports.csv]</parent-name>
+            <remote-alias>FlooredDate</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Month]</local-name>
+            <parent-name>[salmon_monthly_reports.csv]</parent-name>
+            <remote-alias>Month</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[salmon_monthly_reports.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Actual Biomass' datatype='integer' name='[ActualBiomass]' role='dimension' type='ordinal' />
+      <column caption='Biomass Exceedence Tonnes' datatype='integer' name='[BiomassExceedenceTonnes]' role='measure' type='quantitative' />
+      <column caption='Mortalities Kilograms (Numeric)' datatype='integer' datatype-customized='true' name='[Calculation_1744863383090520064]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='INT([MortalitiesKilograms])' />
+      </column>
+      <column caption='Country' datatype='string' name='[Calculation_1744863383108235267]' role='dimension' semantic-role='[Country].[Name]' type='nominal'>
+        <calculation class='tableau' formula='IF [Country] = &quot;Soctland&quot; THEN &quot;Scotland&quot;&#13;&#10;ELSE [Country]&#13;&#10;END' />
+        <semantic-values semantic-role='[Country].[Name]'>
+          <semantic-value key='&quot;Scotland&quot;' value='&quot;United Kingdom&quot;' />
+        </semantic-values>
+      </column>
+      <column caption='Mortality Rate (%)' datatype='real' datatype-customized='true' name='[Calculation_1744863383312302084]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF SUM([ActualBiomass]) &gt; 0 THEN&#13;&#10;  (SUM([Calculation_1744863383090520064]) / (SUM([ActualBiomass]) * 1000)) * 100&#13;&#10;ELSE&#13;&#10;  NULL&#13;&#10;END' />
+      </column>
+      <column caption='Monthly Mortality Rate %' datatype='real' name='[Calculation_1744863383388246026]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF { FIXED [FlooredDate], [LocalAuthority] :&#13;&#10;     AVG([ActualBiomass]) } &gt; 0 THEN&#13;&#10;  ( { FIXED [FlooredDate], [LocalAuthority] :&#13;&#10;      SUM([Calculation_1744863383090520064]) } /&#13;&#10;    ( { FIXED [FlooredDate], [LocalAuthority] :&#13;&#10;        AVG([ActualBiomass]) } * 1000) ) * 100&#13;&#10;ELSE&#13;&#10;  NULL&#13;&#10;END' />
+      </column>
+      <column caption='Yearly Mortality Rate by Region (%)' datatype='real' name='[Calculation_1744863383403454475]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF { FIXED [Year], [LocalAuthority] : AVG([ActualBiomass]) } &gt; 0 THEN&#13;&#10;  ( { FIXED [Year], [LocalAuthority] : SUM([Calculation_1744863383090520064]) } /&#13;&#10;    ( { FIXED [Year], [LocalAuthority] : AVG([ActualBiomass]) } * 1000) ) * 100&#13;&#10;ELSE&#13;&#10;  NULL&#13;&#10;END' />
+      </column>
+      <column caption='Show Monthly' datatype='integer' name='[Calculation_1744863390741807118]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[Parameter 1] = &quot;Monthly View&quot; THEN 1 ELSE 0 END' />
+      </column>
+      <column caption='Show Yearly' datatype='integer' name='[Calculation_1744863390742052879]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[Parameter 1] = &quot;Yearly View&quot; THEN 1 ELSE 0 END' />
+      </column>
+      <column caption='Dynamic Main Title' datatype='string' name='[Calculation_1744863390773874705]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Parameters].[Parameter 1] = &quot;Monthly View&quot; THEN&#13;&#10;  &quot;Monthly Mortality (Kg)&quot;&#13;&#10;ELSE&#13;&#10;  &quot;Yearly Mortality (Kg)&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Dynamic Region Title' datatype='string' name='[Calculation_1744863390774013970]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Parameters].[Parameter 1] = &quot;Monthly View&quot; THEN&#13;&#10;  &quot;Monthly Mortality by Region&quot;&#13;&#10;ELSE&#13;&#10;  &quot;Yearly Mortality by Region&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Block Month Filter' datatype='boolean' name='[Calculation_1744863391155642392]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Parameters].[Parameter 1] = &quot;Yearly View&quot;' />
+      </column>
+      <column caption='Country-1' datatype='string' hidden='true' name='[Country]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='Feed Kilograms' datatype='integer' name='[FeedKilograms]' role='measure' type='quantitative' />
+      <column caption='Floored Date' datatype='date' name='[FlooredDate]' role='dimension' type='ordinal' />
+      <column caption='Lab Reference' datatype='integer' name='[Lab_Reference]' role='measure' type='quantitative' />
+      <column caption='Local Authority' datatype='string' name='[LocalAuthority]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='Maximum Biomass Allowed' datatype='integer' name='[MaximumBiomassAllowed]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+      <column caption='Mortalities Kilograms' datatype='string' name='[MortalitiesKilograms]' role='dimension' type='nominal' />
+      <column caption='Sample Number' datatype='integer' name='[SampleNumber]' role='dimension' type='ordinal' />
+      <column caption='Water Type' datatype='string' name='[WaterType]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='salmon_monthly_reports.csv' datatype='table' name='[__tableau_internal_object_id__].[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]' role='measure' type='quantitative' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <drill-paths>
+        <drill-path name='Country, Local Authority'>
+          <field>[Calculation_1744863383108235267]</field>
+          <field>[LocalAuthority]</field>
+        </drill-path>
+      </drill-paths>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='false' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='data/extract.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/16/2025 10:28:22 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>SampleNumber</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[SampleNumber]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SampleNumber</remote-alias>
+              <ordinal>0</ordinal>
+              <family>salmon_monthly_reports.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>82522</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MortalitiesKilograms</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[MortalitiesKilograms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MortalitiesKilograms</remote-alias>
+              <ordinal>1</ordinal>
+              <family>salmon_monthly_reports.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>17738</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ActualBiomass</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ActualBiomass]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ActualBiomass</remote-alias>
+              <ordinal>2</ordinal>
+              <family>salmon_monthly_reports.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5605</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BiomassExceedenceTonnes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[BiomassExceedenceTonnes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BiomassExceedenceTonnes</remote-alias>
+              <ordinal>3</ordinal>
+              <family>salmon_monthly_reports.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>226</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FeedKilograms</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[FeedKilograms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>FeedKilograms</remote-alias>
+              <ordinal>4</ordinal>
+              <family>salmon_monthly_reports.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>29912</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MaximumBiomassAllowed</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[MaximumBiomassAllowed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MaximumBiomassAllowed</remote-alias>
+              <ordinal>5</ordinal>
+              <family>salmon_monthly_reports.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>438</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>WaterType</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[WaterType]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>WaterType</remote-alias>
+              <ordinal>6</ordinal>
+              <family>salmon_monthly_reports.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LocalAuthority</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[LocalAuthority]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LocalAuthority</remote-alias>
+              <ordinal>7</ordinal>
+              <family>salmon_monthly_reports.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>8</ordinal>
+              <family>salmon_monthly_reports.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lab_Reference</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Lab_Reference]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lab_Reference</remote-alias>
+              <ordinal>9</ordinal>
+              <family>salmon_monthly_reports.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FlooredDate</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[FlooredDate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>FlooredDate</remote-alias>
+              <ordinal>10</ordinal>
+              <family>salmon_monthly_reports.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>507</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Month</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Month</remote-alias>
+              <ordinal>11</ordinal>
+              <family>salmon_monthly_reports.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>12</ordinal>
+              <family>salmon_monthly_reports.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout common-percentage='0.955414' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.044586' rowDisplayCount='100' show-structure='true' user-set-layout-v2='true' />
+      <semantic-values>
+        <semantic-value key='[City].[Name]' value='%null%' />
+        <semantic-value key='[Country].[Name]' value='%null%' />
+        <semantic-value key='[State].[Name]' value='%null%' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='SampleNumber' />
+        <field-sort-custom-order field='MortalitiesKilograms' />
+        <field-sort-custom-order field='Calculation_1744863383090520064' />
+        <field-sort-custom-order field='ActualBiomass' />
+        <field-sort-custom-order field='BiomassExceedenceTonnes' />
+        <field-sort-custom-order field='FeedKilograms' />
+        <field-sort-custom-order field='MaximumBiomassAllowed' />
+        <field-sort-custom-order field='WaterType' />
+        <field-sort-custom-order field='LocalAuthority' />
+        <field-sort-custom-order field='Country' />
+        <field-sort-custom-order field='Calculation_1744863383108235267' />
+        <field-sort-custom-order field='Lab_Reference' />
+        <field-sort-custom-order field='FlooredDate' />
+        <field-sort-custom-order field='Month' />
+        <field-sort-custom-order field='Year' />
+        <field-sort-custom-order field='Calculation_1744863383312302084' />
+        <field-sort-custom-order field='Calculation_1744863383403454475' />
+        <field-sort-custom-order field='Calculation_1744863383388246026' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Select View Type' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Monthly View&quot;'>
+          <calculation class='tableau' formula='&quot;Monthly View&quot;' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='salmon_monthly_reports.csv' id='salmon_monthly_reports.csv_7CA6521BEA9840D698C01F131F08FDC6'>
+            <properties context=''>
+              <relation connection='textscan.1o4gan20vywcki1176hfw13x7g8d' name='salmon_monthly_reports.csv' table='[salmon_monthly_reports#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_BE'>
+                  <column datatype='integer' name='SampleNumber' ordinal='0' />
+                  <column datatype='string' name='MortalitiesKilograms' ordinal='1' />
+                  <column datatype='integer' name='ActualBiomass' ordinal='2' />
+                  <column datatype='integer' name='BiomassExceedenceTonnes' ordinal='3' />
+                  <column datatype='integer' name='FeedKilograms' ordinal='4' />
+                  <column datatype='integer' name='MaximumBiomassAllowed' ordinal='5' />
+                  <column datatype='string' name='WaterType' ordinal='6' />
+                  <column datatype='string' name='LocalAuthority' ordinal='7' />
+                  <column datatype='string' name='Country' ordinal='8' />
+                  <column datatype='integer' name='Lab_Reference' ordinal='9' />
+                  <column datatype='date' name='FlooredDate' ordinal='10' />
+                  <column datatype='integer' name='Month' ordinal='11' />
+                  <column datatype='integer' name='Year' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Block Month Filter'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='salmon_monthly_reports' name='federated.0crdx780xhagyr0zmu6b41dj93fn' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select View Type' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Monthly View&quot;'>
+              <calculation class='tableau' formula='&quot;Monthly View&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0crdx780xhagyr0zmu6b41dj93fn'>
+            <column caption='Block Month Filter' datatype='boolean' name='[Calculation_1744863391155642392]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1] = &quot;Yearly View&quot;' />
+            </column>
+            <column-instance column='[Calculation_1744863391155642392]' derivation='None' name='[none:Calculation_1744863391155642392:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863391155642392:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1744863391155642392:nk]' member='false' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863391155642392:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{EF8BA6D0-6C68-4982-A9E6-7F9794AF2556}' />
+    </worksheet>
+    <worksheet name='Dynamic Main title'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='salmon_monthly_reports' name='federated.0crdx780xhagyr0zmu6b41dj93fn' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select View Type' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Monthly View&quot;'>
+              <calculation class='tableau' formula='&quot;Monthly View&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0crdx780xhagyr0zmu6b41dj93fn'>
+            <column caption='Dynamic Main Title' datatype='string' name='[Calculation_1744863390773874705]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 1] = &quot;Monthly View&quot; THEN&#13;&#10;  &quot;Monthly Mortality (Kg)&quot;&#13;&#10;ELSE&#13;&#10;  &quot;Yearly Mortality (Kg)&quot;&#13;&#10;END' />
+            </column>
+            <column-instance column='[Calculation_1744863390773874705]' derivation='None' name='[none:Calculation_1744863390773874705:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='356' />
+            <format attr='height' value='69' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863390773874705:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='15'>&lt;</run>
+                <run bold='true' fontsize='15'>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863390773874705:nk]</run>
+                <run bold='true' fontsize='15'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3B2BBB84-D173-42A5-9A4D-30A3A5B056F7}' />
+    </worksheet>
+    <worksheet name='Dynamic Region Title'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='salmon_monthly_reports' name='federated.0crdx780xhagyr0zmu6b41dj93fn' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select View Type' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Monthly View&quot;'>
+              <calculation class='tableau' formula='&quot;Monthly View&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0crdx780xhagyr0zmu6b41dj93fn'>
+            <column caption='Dynamic Region Title' datatype='string' name='[Calculation_1744863390774013970]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 1] = &quot;Monthly View&quot; THEN&#13;&#10;  &quot;Monthly Mortality by Region&quot;&#13;&#10;ELSE&#13;&#10;  &quot;Yearly Mortality by Region&quot;&#13;&#10;END' />
+            </column>
+            <column-instance column='[Calculation_1744863390774013970]' derivation='None' name='[none:Calculation_1744863390774013970:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863390774013970:nk]' value='46' />
+            <format attr='width' value='401' />
+            <format attr='height' value='34' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863390774013970:nk]' value='232' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863390774013970:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='15'>&lt;</run>
+                <run bold='true' fontsize='15'>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863390774013970:nk]</run>
+                <run bold='true' fontsize='15'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E10BA58A-E197-47ED-9FBA-E9246D7B3778}' />
+    </worksheet>
+    <worksheet name='Monthly Mortality % by Region'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='salmon_monthly_reports' name='federated.0crdx780xhagyr0zmu6b41dj93fn' />
+            <datasource name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select View Type' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Monthly View&quot;'>
+              <calculation class='tableau' formula='&quot;Monthly View&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0crdx780xhagyr0zmu6b41dj93fn'>
+            <column caption='Actual Biomass' datatype='integer' name='[ActualBiomass]' role='dimension' type='ordinal' />
+            <column caption='Mortalities Kilograms (Numeric)' datatype='integer' datatype-customized='true' name='[Calculation_1744863383090520064]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='INT([MortalitiesKilograms])' />
+            </column>
+            <column caption='Country' datatype='string' name='[Calculation_1744863383108235267]' role='dimension' semantic-role='[Country].[Name]' type='nominal'>
+              <calculation class='tableau' formula='IF [Country] = &quot;Soctland&quot; THEN &quot;Scotland&quot;&#13;&#10;ELSE [Country]&#13;&#10;END' />
+              <semantic-values semantic-role='[Country].[Name]'>
+                <semantic-value key='&quot;Scotland&quot;' value='&quot;United Kingdom&quot;' />
+              </semantic-values>
+            </column>
+            <column caption='Mortality Rate (%)' datatype='real' datatype-customized='true' name='[Calculation_1744863383312302084]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF SUM([ActualBiomass]) &gt; 0 THEN&#13;&#10;  (SUM([Calculation_1744863383090520064]) / (SUM([ActualBiomass]) * 1000)) * 100&#13;&#10;ELSE&#13;&#10;  NULL&#13;&#10;END' />
+            </column>
+            <column caption='Show Monthly' datatype='integer' name='[Calculation_1744863390741807118]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 1] = &quot;Monthly View&quot; THEN 1 ELSE 0 END' />
+            </column>
+            <column caption='Country-1' datatype='string' hidden='true' name='[Country]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column caption='Floored Date' datatype='date' name='[FlooredDate]' role='dimension' type='ordinal' />
+            <column caption='Local Authority' datatype='string' name='[LocalAuthority]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column caption='Mortalities Kilograms' datatype='string' name='[MortalitiesKilograms]' role='dimension' type='nominal' />
+            <column caption='Water Type' datatype='string' name='[WaterType]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1744863390741807118]' derivation='Attribute' name='[attr:Calculation_1744863390741807118:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[FlooredDate]' derivation='Month' name='[mn:FlooredDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[FlooredDate]' derivation='MY' name='[my:FlooredDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1744863383108235267]' derivation='None' name='[none:Calculation_1744863383108235267:nk]' pivot='key' type='nominal' />
+            <column-instance column='[LocalAuthority]' derivation='None' name='[none:LocalAuthority:nk]' pivot='key' type='nominal' />
+            <column-instance column='[WaterType]' derivation='None' name='[none:WaterType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1744863383312302084]' derivation='User' name='[usr:Calculation_1744863383312302084:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[FlooredDate]' derivation='Year' name='[yr:FlooredDate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[attr:Calculation_1744863390741807118:qk]' filter-group='3' included-values='in-range'>
+            <min>1</min>
+            <max>1</max>
+          </filter>
+          <filter class='categorical' column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[my:FlooredDate:ok]'>
+            <groupfilter function='level-members' level='[my:FlooredDate:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:WaterType:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:WaterType:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0crdx780xhagyr0zmu6b41dj93fn].[attr:Calculation_1744863390741807118:qk]</column>
+            <column>[federated.0crdx780xhagyr0zmu6b41dj93fn].[my:FlooredDate:ok]</column>
+            <column>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:WaterType:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0crdx780xhagyr0zmu6b41dj93fn].[Longitude (generated)]' field-type='quantitative' max='2028605.5217766515' min='-3497657.952795079' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0crdx780xhagyr0zmu6b41dj93fn].[Latitude (generated)]' field-type='quantitative' max='8847125.4251788799' min='7248217.5119186165' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0crdx780xhagyr0zmu6b41dj93fn].[yr:FlooredDate:ok]' value='Select Year'>
+              <formatted-text>
+                <run>Select Year</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.0crdx780xhagyr0zmu6b41dj93fn].[mn:FlooredDate:ok]' value='Select Month'>
+              <formatted-text>
+                <run>Select Month</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.0crdx780xhagyr0zmu6b41dj93fn].[attr:Calculation_1744863390741807118:qk]' value='Show Monthly'>
+              <formatted-text>
+                <run>Show Monthly</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.0crdx780xhagyr0zmu6b41dj93fn].[my:FlooredDate:ok]' value='Select Month(when monthly view)'>
+              <formatted-text>
+                <run>Select Month(when monthly view)</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[usr:Calculation_1744863383312302084:qk]' />
+              <lod column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863383108235267:nk]' />
+              <lod column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:LocalAuthority:nk]' />
+              <geometry column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0crdx780xhagyr0zmu6b41dj93fn].[Latitude (generated)]</rows>
+        <cols>[federated.0crdx780xhagyr0zmu6b41dj93fn].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{E5835148-C2C6-41CD-A248-B8E57717037F}' />
+    </worksheet>
+    <worksheet name='Monthly Mortality (kg)'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='salmon_monthly_reports' name='federated.0crdx780xhagyr0zmu6b41dj93fn' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select View Type' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Monthly View&quot;'>
+              <calculation class='tableau' formula='&quot;Monthly View&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0crdx780xhagyr0zmu6b41dj93fn'>
+            <column caption='Actual Biomass' datatype='integer' name='[ActualBiomass]' role='dimension' type='ordinal' />
+            <column caption='Mortalities Kilograms (Numeric)' datatype='integer' datatype-customized='true' name='[Calculation_1744863383090520064]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='INT([MortalitiesKilograms])' />
+            </column>
+            <column caption='Country' datatype='string' name='[Calculation_1744863383108235267]' role='dimension' semantic-role='[Country].[Name]' type='nominal'>
+              <calculation class='tableau' formula='IF [Country] = &quot;Soctland&quot; THEN &quot;Scotland&quot;&#13;&#10;ELSE [Country]&#13;&#10;END' />
+              <semantic-values semantic-role='[Country].[Name]'>
+                <semantic-value key='&quot;Scotland&quot;' value='&quot;United Kingdom&quot;' />
+              </semantic-values>
+            </column>
+            <column caption='Mortality Rate (%)' datatype='real' datatype-customized='true' name='[Calculation_1744863383312302084]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF SUM([ActualBiomass]) &gt; 0 THEN&#13;&#10;  (SUM([Calculation_1744863383090520064]) / (SUM([ActualBiomass]) * 1000)) * 100&#13;&#10;ELSE&#13;&#10;  NULL&#13;&#10;END' />
+            </column>
+            <column caption='Show Monthly' datatype='integer' name='[Calculation_1744863390741807118]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 1] = &quot;Monthly View&quot; THEN 1 ELSE 0 END' />
+            </column>
+            <column caption='Country-1' datatype='string' hidden='true' name='[Country]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column caption='Floored Date' datatype='date' name='[FlooredDate]' role='dimension' type='ordinal' />
+            <column caption='Mortalities Kilograms' datatype='string' name='[MortalitiesKilograms]' role='dimension' type='nominal' />
+            <column caption='Water Type' datatype='string' name='[WaterType]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1744863390741807118]' derivation='Attribute' name='[attr:Calculation_1744863390741807118:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1744863383108235267]' derivation='None' name='[none:Calculation_1744863383108235267:nk]' pivot='key' type='nominal' />
+            <column-instance column='[WaterType]' derivation='None' name='[none:WaterType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[FlooredDate]' derivation='Month-Trunc' name='[tmn:FlooredDate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1744863383312302084]' derivation='User' name='[usr:Calculation_1744863383312302084:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[attr:Calculation_1744863390741807118:qk]' filter-group='3' included-values='in-range'>
+            <min>1</min>
+            <max>1</max>
+          </filter>
+          <filter class='categorical' column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:WaterType:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:WaterType:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0crdx780xhagyr0zmu6b41dj93fn].[attr:Calculation_1744863390741807118:qk]</column>
+            <column>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:WaterType:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0crdx780xhagyr0zmu6b41dj93fn].[tmn:FlooredDate:qk]' scope='cols' value='' />
+            <format attr='height' field='[federated.0crdx780xhagyr0zmu6b41dj93fn].[tmn:FlooredDate:qk]' value='31' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.0crdx780xhagyr0zmu6b41dj93fn].[usr:Calculation_1744863383312302084:qk]</rows>
+        <cols>[federated.0crdx780xhagyr0zmu6b41dj93fn].[tmn:FlooredDate:qk]</cols>
+        <tooltip-style tooltip-mode='sticky' />
+      </table>
+      <simple-id uuid='{1597B164-C377-4D9E-A0A7-324495AC72B1}' />
+    </worksheet>
+    <worksheet name='Yearly Mortality (kg)'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='salmon_monthly_reports' name='federated.0crdx780xhagyr0zmu6b41dj93fn' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select View Type' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Monthly View&quot;'>
+              <calculation class='tableau' formula='&quot;Monthly View&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0crdx780xhagyr0zmu6b41dj93fn'>
+            <column caption='Actual Biomass' datatype='integer' name='[ActualBiomass]' role='dimension' type='ordinal' />
+            <column caption='Mortalities Kilograms (Numeric)' datatype='integer' datatype-customized='true' name='[Calculation_1744863383090520064]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='INT([MortalitiesKilograms])' />
+            </column>
+            <column caption='Mortality Rate (%)' datatype='real' datatype-customized='true' name='[Calculation_1744863383312302084]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF SUM([ActualBiomass]) &gt; 0 THEN&#13;&#10;  (SUM([Calculation_1744863383090520064]) / (SUM([ActualBiomass]) * 1000)) * 100&#13;&#10;ELSE&#13;&#10;  NULL&#13;&#10;END' />
+            </column>
+            <column caption='Show Yearly' datatype='integer' name='[Calculation_1744863390742052879]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 1] = &quot;Yearly View&quot; THEN 1 ELSE 0 END' />
+            </column>
+            <column caption='Floored Date' datatype='date' name='[FlooredDate]' role='dimension' type='ordinal' />
+            <column caption='Mortalities Kilograms' datatype='string' name='[MortalitiesKilograms]' role='dimension' type='nominal' />
+            <column caption='Water Type' datatype='string' name='[WaterType]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1744863390742052879]' derivation='Attribute' name='[attr:Calculation_1744863390742052879:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[WaterType]' derivation='None' name='[none:WaterType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[FlooredDate]' derivation='Year-Trunc' name='[tyr:FlooredDate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1744863383312302084]' derivation='User' name='[usr:Calculation_1744863383312302084:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[attr:Calculation_1744863390742052879:qk]' filter-group='4' included-values='in-range'>
+            <min>1</min>
+            <max>1</max>
+          </filter>
+          <filter class='categorical' column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:WaterType:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:WaterType:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0crdx780xhagyr0zmu6b41dj93fn].[attr:Calculation_1744863390742052879:qk]</column>
+            <column>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:WaterType:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0crdx780xhagyr0zmu6b41dj93fn].[tyr:FlooredDate:qk]' scope='cols' value='' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='false' />
+          </pane>
+        </panes>
+        <rows>[federated.0crdx780xhagyr0zmu6b41dj93fn].[usr:Calculation_1744863383312302084:qk]</rows>
+        <cols>[federated.0crdx780xhagyr0zmu6b41dj93fn].[tyr:FlooredDate:qk]</cols>
+      </table>
+      <simple-id uuid='{4E26D3EB-C6C6-47B8-A4E3-20B9ECD99900}' />
+    </worksheet>
+    <worksheet name='Yearly Mortality% by Region'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='salmon_monthly_reports' name='federated.0crdx780xhagyr0zmu6b41dj93fn' />
+            <datasource name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select View Type' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Monthly View&quot;'>
+              <calculation class='tableau' formula='&quot;Monthly View&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0crdx780xhagyr0zmu6b41dj93fn'>
+            <column caption='Actual Biomass' datatype='integer' name='[ActualBiomass]' role='dimension' type='ordinal' />
+            <column caption='Mortalities Kilograms (Numeric)' datatype='integer' datatype-customized='true' name='[Calculation_1744863383090520064]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='INT([MortalitiesKilograms])' />
+            </column>
+            <column caption='Country' datatype='string' name='[Calculation_1744863383108235267]' role='dimension' semantic-role='[Country].[Name]' type='nominal'>
+              <calculation class='tableau' formula='IF [Country] = &quot;Soctland&quot; THEN &quot;Scotland&quot;&#13;&#10;ELSE [Country]&#13;&#10;END' />
+              <semantic-values semantic-role='[Country].[Name]'>
+                <semantic-value key='&quot;Scotland&quot;' value='&quot;United Kingdom&quot;' />
+              </semantic-values>
+            </column>
+            <column caption='Mortality Rate (%)' datatype='real' datatype-customized='true' name='[Calculation_1744863383312302084]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF SUM([ActualBiomass]) &gt; 0 THEN&#13;&#10;  (SUM([Calculation_1744863383090520064]) / (SUM([ActualBiomass]) * 1000)) * 100&#13;&#10;ELSE&#13;&#10;  NULL&#13;&#10;END' />
+            </column>
+            <column caption='Show Yearly' datatype='integer' name='[Calculation_1744863390742052879]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 1] = &quot;Yearly View&quot; THEN 1 ELSE 0 END' />
+            </column>
+            <column caption='Country-1' datatype='string' hidden='true' name='[Country]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column caption='Floored Date' datatype='date' name='[FlooredDate]' role='dimension' type='ordinal' />
+            <column caption='Local Authority' datatype='string' name='[LocalAuthority]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column caption='Mortalities Kilograms' datatype='string' name='[MortalitiesKilograms]' role='dimension' type='nominal' />
+            <column caption='Water Type' datatype='string' name='[WaterType]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1744863390742052879]' derivation='Attribute' name='[attr:Calculation_1744863390742052879:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1744863383108235267]' derivation='None' name='[none:Calculation_1744863383108235267:nk]' pivot='key' type='nominal' />
+            <column-instance column='[LocalAuthority]' derivation='None' name='[none:LocalAuthority:nk]' pivot='key' type='nominal' />
+            <column-instance column='[WaterType]' derivation='None' name='[none:WaterType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1744863383312302084]' derivation='User' name='[usr:Calculation_1744863383312302084:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[FlooredDate]' derivation='Year' name='[yr:FlooredDate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[attr:Calculation_1744863390742052879:qk]' filter-group='4' included-values='in-range'>
+            <min>1</min>
+            <max>1</max>
+          </filter>
+          <filter class='categorical' column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:WaterType:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:WaterType:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[yr:FlooredDate:ok]'>
+            <groupfilter function='level-members' level='[yr:FlooredDate:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0crdx780xhagyr0zmu6b41dj93fn].[attr:Calculation_1744863390742052879:qk]</column>
+            <column>[federated.0crdx780xhagyr0zmu6b41dj93fn].[yr:FlooredDate:ok]</column>
+            <column>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:WaterType:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0crdx780xhagyr0zmu6b41dj93fn].[Longitude (generated)]' field-type='quantitative' max='1743429.3571744999' min='-3381498.571071378' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0crdx780xhagyr0zmu6b41dj93fn].[Latitude (generated)]' field-type='quantitative' max='8736013.7673666794' min='7253223.8394043846' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0crdx780xhagyr0zmu6b41dj93fn].[yr:FlooredDate:ok]' value='Select Year (when yearly view)'>
+              <formatted-text>
+                <run>Select Year (when yearly view)</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[usr:Calculation_1744863383312302084:qk]' />
+              <lod column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863383108235267:nk]' />
+              <lod column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:LocalAuthority:nk]' />
+              <geometry column='[federated.0crdx780xhagyr0zmu6b41dj93fn].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='208' />
+                <format attr='mark-labels-mode' value='highlight' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0crdx780xhagyr0zmu6b41dj93fn].[Latitude (generated)]</rows>
+        <cols>[federated.0crdx780xhagyr0zmu6b41dj93fn].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{DE50842B-A950-4800-B684-51AAA5463470}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='860' maxwidth='1200' minheight='800' minwidth='1200' sizing-mode='range' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='salmon_monthly_reports' name='federated.0crdx780xhagyr0zmu6b41dj93fn' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Select View Type' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Monthly View&quot;'>
+          <calculation class='tableau' formula='&quot;Monthly View&quot;' />
+          <members>
+            <member value='&quot;Monthly View&quot;' />
+            <member value='&quot;Yearly View&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.0crdx780xhagyr0zmu6b41dj93fn'>
+        <column caption='Country' datatype='string' name='[Calculation_1744863383108235267]' role='dimension' semantic-role='[Country].[Name]' type='nominal'>
+          <calculation class='tableau' formula='IF [Country] = &quot;Soctland&quot; THEN &quot;Scotland&quot;&#13;&#10;ELSE [Country]&#13;&#10;END' />
+          <semantic-values semantic-role='[Country].[Name]'>
+            <semantic-value key='&quot;Scotland&quot;' value='&quot;United Kingdom&quot;' />
+          </semantic-values>
+        </column>
+        <column caption='Floored Date' datatype='date' name='[FlooredDate]' role='dimension' type='ordinal' />
+        <column caption='Water Type' datatype='string' name='[WaterType]' role='dimension' type='nominal' />
+        <column-instance column='[FlooredDate]' derivation='MY' name='[my:FlooredDate:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[Calculation_1744863383108235267]' derivation='None' name='[none:Calculation_1744863383108235267:nk]' pivot='key' type='nominal' />
+        <column-instance column='[WaterType]' derivation='None' name='[none:WaterType:nk]' pivot='key' type='nominal' />
+        <column-instance column='[FlooredDate]' derivation='Year' name='[yr:FlooredDate:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='9' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98004' id='38' param='horz' type-v2='layout-flow' w='98666' x='667' y='998'>
+            <zone h='98004' id='35' param='horz' type-v2='layout-flow' w='98666' x='667' y='998'>
+              <zone h='98004' id='23' param='horz' type-v2='layout-flow' w='98666' x='667' y='998'>
+                <zone h='98004' id='20' param='horz' type-v2='layout-flow' w='98666' x='667' y='998'>
+                  <zone h='98004' id='18' type-v2='layout-basic' w='98666' x='667' y='998' />
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='42768' id='2' param='vert' type-v2='layout-flow' w='75500' x='1417' y='8603'>
+          <zone h='39775' id='10' name='Monthly Mortality (kg)' w='75500' x='1417' y='8603'>
+            <layout-cache minheight='146' type-h='scalable' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='2993' id='21' name='Yearly Mortality (kg)' w='75500' x='1417' y='48378'>
+            <layout-cache has-max-size-h='true' maxheight='24' minheight='24' type-h='scalable' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone custom-title='true' h='7232' id='8' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='20750' x='78583' y='9227'>
+          <formatted-text>
+            <run>Select view type</run>
+          </formatted-text>
+        </zone>
+        <zone h='10224' id='11' mode='checkdropdown' name='Monthly Mortality (kg)' param='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863383108235267:nk]' type-v2='filter' values='cascading' w='19917' x='79083' y='40524' />
+        <zone h='38778' id='12' param='vert' type-v2='layout-flow' w='76500' x='667' y='58479'>
+          <zone h='36783' id='15' name='Monthly Mortality % by Region' w='76500' x='667' y='58479'>
+            <layout-cache minheight='216' type-h='scalable' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='1995' id='25' name='Yearly Mortality% by Region' w='76500' x='667' y='95262'>
+            <layout-cache has-max-size-h='true' maxheight='16' minheight='16' type-h='scalable' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='10723' id='26' name='Dynamic Main title' show-title='false' w='35417' x='1917' y='1621' />
+        <zone h='6608' id='27' name='Dynamic Region Title' w='40250' x='1833' y='53367' />
+        <zone h='9352' id='31' mode='checkdropdown' name='Yearly Mortality% by Region' param='[federated.0crdx780xhagyr0zmu6b41dj93fn].[yr:FlooredDate:ok]' type-v2='filter' w='20500' x='78750' y='29676' />
+        <zone h='7606' id='36' mode='checkdropdown' name='Monthly Mortality % by Region' param='[federated.0crdx780xhagyr0zmu6b41dj93fn].[my:FlooredDate:ok]' type-v2='filter' w='21167' x='77917' y='19451'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='4' />
+          </zone-style>
+        </zone>
+        <zone h='10224' id='39' mode='checkdropdown' name='Monthly Mortality (kg)' param='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:WaterType:nk]' type-v2='filter' values='database' w='19583' x='79417' y='52244' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1650' minheight='1650' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='41' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98004' id='40' param='vert' type-v2='layout-flow' w='98666' x='667' y='998'>
+                <zone fixed-size='92' h='10723' id='26' is-fixed='true' name='Dynamic Main title' show-title='false' w='35417' x='1917' y='1621'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10224' id='11' mode='checkdropdown' name='Monthly Mortality (kg)' param='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863383108235267:nk]' type-v2='filter' values='cascading' w='19917' x='79083' y='40524'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10224' id='39' mode='checkdropdown' name='Monthly Mortality (kg)' param='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:WaterType:nk]' type-v2='filter' values='database' w='19583' x='79417' y='52244'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39775' id='10' is-fixed='true' name='Monthly Mortality (kg)' w='75500' x='1417' y='8603'>
+                  <layout-cache minheight='146' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone custom-title='true' h='7232' id='8' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='20750' x='78583' y='9227'>
+                  <formatted-text>
+                    <run>Select view type</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='2993' id='21' is-fixed='true' name='Yearly Mortality (kg)' w='75500' x='1417' y='48378'>
+                  <layout-cache has-max-size-h='true' maxheight='24' minheight='24' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='57' h='6608' id='27' is-fixed='true' name='Dynamic Region Title' w='40250' x='1833' y='53367'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7606' id='36' mode='checkdropdown' name='Monthly Mortality % by Region' param='[federated.0crdx780xhagyr0zmu6b41dj93fn].[my:FlooredDate:ok]' type-v2='filter' w='21167' x='77917' y='19451'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35785' id='15' is-fixed='true' name='Monthly Mortality % by Region' w='76500' x='667' y='58479'>
+                  <layout-cache minheight='216' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9352' id='31' mode='checkdropdown' name='Yearly Mortality% by Region' param='[federated.0crdx780xhagyr0zmu6b41dj93fn].[yr:FlooredDate:ok]' type-v2='filter' w='20500' x='78750' y='29676'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='2993' id='25' is-fixed='true' name='Yearly Mortality% by Region' w='76500' x='667' y='94264'>
+                  <layout-cache has-max-size-h='true' maxheight='24' minheight='24' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{6F27ED06-07FC-42C3-A136-B8908230D955}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Yearly Mortality (kg)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0crdx780xhagyr0zmu6b41dj93fn].[attr:Calculation_1744863390742052879:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863383090520064:ok]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Year:qk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[tyr:FlooredDate:ok]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[yr:FlooredDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{6F4B87E2-0ED1-4D78-BA06-BF420C4075DC}' />
+    </window>
+    <window class='worksheet' name='Monthly Mortality (kg)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:WaterType:nk]' type='filter' />
+            <card param='[federated.0crdx780xhagyr0zmu6b41dj93fn].[attr:Calculation_1744863390741807118:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[my:FlooredDate:ok]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863383090520064:nk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:MortalitiesKilograms:nk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:WaterType:nk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[tmn:FlooredDate:ok]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[yr:FlooredDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F4F2A458-7345-43C7-BC1E-20D5422AEF03}' />
+    </window>
+    <window class='worksheet' name='Monthly Mortality % by Region'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0crdx780xhagyr0zmu6b41dj93fn].[attr:Calculation_1744863390741807118:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.0crdx780xhagyr0zmu6b41dj93fn].[usr:Calculation_1744863383312302084:qk]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[attr:Calculation_1744863383388246026:qk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[mn:FlooredDate:ok]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[my:FlooredDate:ok]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863383090520064:ok]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863383108235267:nk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Country:nk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:LocalAuthority:nk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Month:qk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[pcrk:usr:Calculation_1744863383312302084:qk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[prc75:Calculation_1744863383090520064:qk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[sum:Calculation_1744863383312302084:qk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[yr:FlooredDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{039DF29E-2BA0-49EF-9F1D-6F5A0E9E40F3}' />
+    </window>
+    <window class='worksheet' name='Yearly Mortality% by Region'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0crdx780xhagyr0zmu6b41dj93fn].[usr:Calculation_1744863383312302084:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[attr:Calculation_1744863383388246026:qk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[attr:Calculation_1744863383403454475:qk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[my:FlooredDate:ok]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863383090520064:ok]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863383108235267:nk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Country:nk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:LocalAuthority:nk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Year:qk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[prc75:Calculation_1744863383090520064:qk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[sum:Calculation_1744863383312302084:qk]</field>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[yr:FlooredDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B2F8BF30-DE96-4F13-B146-6B5B4082F17F}' />
+    </window>
+    <window class='worksheet' name='Dynamic Main title'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863390773874705:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Yearly Mortality (Kg)&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863390773874705:nk]</field>
+          </color-one-way>
+        </highlight>
+        <floating-toolbar-visibility value='1' />
+      </viewpoint>
+      <simple-id uuid='{EB9C1A95-41DE-405E-9580-82C6880F182C}' />
+    </window>
+    <window class='worksheet' name='Dynamic Region Title'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863390774013970:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{63D8B310-1A22-488F-A959-E7D865B85452}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Dynamic Main title'>
+          <floating-toolbar-visibility value='1' />
+        </viewpoint>
+        <viewpoint name='Dynamic Region Title' />
+        <viewpoint name='Monthly Mortality % by Region'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Monthly Mortality (kg)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Yearly Mortality (kg)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Yearly Mortality% by Region'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='8' />
+      <simple-id uuid='{4264BCF3-53E5-4FFC-B338-D7C01B756BEA}' />
+    </window>
+    <window class='worksheet' name='Block Month Filter'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0crdx780xhagyr0zmu6b41dj93fn].[none:Calculation_1744863391155642392:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{BE5081CE-2085-4A5D-967B-CCF12FCF8AA5}' />
+    </window>
+  </windows>
+  <explain-data enabled-for-viewer='false' extreme-values-enabled-for-all='false'>
+    <explanation-types>
+      <explanation-type enabled='true' type='number-of-records' />
+      <explanation-type enabled='true' type='average-of-records' />
+      <explanation-type enabled='true' type='aggregated-dimensions' />
+      <explanation-type enabled='true' type='distribution-of-records' />
+      <explanation-type enabled='true' type='unvisualized-measures' />
+      <explanation-type enabled='true' type='extreme-values' />
+      <explanation-type enabled='true' type='null-value' />
+      <explanation-type enabled='true' type='tvd-single-value' />
+      <explanation-type enabled='true' type='ad-single-value' />
+    </explanation-types>
+  </explain-data>
+</workbook>
