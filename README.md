@@ -1,7 +1,7 @@
 # Aquaculture Salmon Mortality Dashboard (Tableau)
 
 A reusable Tableau workbook that shows the mortality of farmed Atlantic salmon over time and by
-region, in kilograms and as a percentage of the biomass on site. It works with monthly farm reports,
+region, as a percentage of the biomass on site. It works with monthly farm reports,
 one row per farm site per month.
 
 **No data are included in this repository.** The workbook (`.twb`) contains only the design of the
@@ -15,13 +15,11 @@ columns listed below.
 | Element | What it shows |
 |---|---|
 | Dynamic main title | "Monthly Mortality (Kg)" or "Yearly Mortality (Kg)", depending on the selected view |
-| Monthly Mortality (kg) | total mortality per month |
-| Yearly Mortality (kg) | total mortality per year |
+| Monthly / Yearly chart | bar chart of the mortality rate (%) per month or per year |
 | Dynamic region title | "Monthly Mortality by Region" or "Yearly Mortality by Region" |
-| Monthly Mortality % by Region | mortality as a percentage of the biomass on site, per local authority and month |
-| Yearly Mortality % by Region | the same per local authority and year |
-| View switch (parameter) | switches the whole dashboard between Monthly View and Yearly View |
-| Filters | date, water type and region |
+| Monthly / Yearly map by region | map of the mortality rate (%) per local authority, per month or year |
+| View switch (parameter) | "Select view type": switches the whole dashboard between Monthly View and Yearly View |
+| Filters | Select Month (monthly view), Select Year (yearly view), Country and Water Type |
 
 When the Yearly View is selected, the month filter is blocked, so that only yearly totals are shown.
 
@@ -29,8 +27,8 @@ When the Yearly View is selected, the month filter is blocked, so that only year
 flowchart LR
     CSV["Monthly farm reports<br/>(CSV, your own data)"] --> TW["Tableau workbook<br/>Aquaculture_Salmon_Mortality_Dashboard.twb"]
     P["View switch<br/>Monthly / Yearly"] --> TW
-    TW --> K["Mortality (kg)<br/>per month / year"]
-    TW --> R["Mortality %<br/>per region"]
+    TW --> K["Mortality rate (%)<br/>per month / year"]
+    TW --> R["Map of mortality rate (%)<br/>per region"]
 ```
 
 ## Calculations
@@ -76,23 +74,33 @@ One row per farm site per month. The column names must match exactly.
 In the Monthly View, the charts show one value per month; in the Yearly View, one value per year,
 and the month filter is blocked. The titles change with the selection.
 
-**2. Mortality in kilograms.** The upper chart shows the total weight of fish that died in each
-month or year. It shows when mortality was high, but it does not take the size of the farms into
-account: a region with more fish on site will usually also have more mortality in kilograms.
+**2. Mortality over time.** The bar chart shows the mortality rate: the mortality in kilograms
+divided by the biomass on site. Because it is a percentage, months and years with different amounts
+of fish on site can be compared directly, and peaks show periods when a larger share of the fish died.
 
-**3. Mortality as a percentage of biomass.** The lower chart divides the mortality by the biomass on
-site, per region. This makes regions and periods comparable, because a large and a small farming
-region are expressed on the same scale. A region with a high percentage lost a larger share of its
-fish, even if its mortality in kilograms is lower than elsewhere.
+**3. Mortality by region.** The map colours each local authority by its mortality rate for the
+selected period. Regions with a darker colour lost a larger share of their fish, even if they
+farm less fish than other regions.
 
-**4. Filter.** The filters for date, water type and region update all charts at the same time. For
-example, selecting Seawater shows marine farm sites only, and selecting one region shows its trend
-over time.
+**4. Filter.** Select Month, Select Year, Country and Water Type update the chart and the map at the
+same time. For example, selecting Seawater shows marine farm sites only, and selecting one year
+shows the regional pattern of that year.
+
+## Screenshots
+
+**Monthly View**: mortality rate per month (top) and by region (map).
+
+![Monthly view](screenshots/dashboard_monthly.png)
+
+**Yearly View**: the same dashboard with one value per year; the month filter is not used.
+
+![Yearly view](screenshots/dashboard_yearly.png)
 
 ## Files
 
 ```
 workbook/Aquaculture_Salmon_Mortality_Dashboard.twb   Tableau workbook (no data)
+screenshots/                                          monthly and yearly view of the dashboard
 ```
 
 ## Related work
